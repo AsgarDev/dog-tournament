@@ -1,0 +1,196 @@
+$primary-color: #FF0054;
+$secondary-color: #000000;
+$background-color: #F5F5F5;
+$text-color: #333;
+$card-background-color: #FFFFFF;
+$card-shadow-color: rgba(0, 0, 0, 0.05);
+$border-color: #E5E5E5;
+
+$primary-color-rgba: rgba(255, 0, 84, 1);
+$primary-color-light: rgba(255, 0, 84, 0.5);
+$primary-color-dark: rgba(255, 0, 84, 0.8);
+
+$secondary-color-rgba: rgba(0, 123, 255, 1);
+$secondary-color-light: rgba(0, 123, 255, 0.5);
+$secondary-color-dark: rgba(0, 123, 255, 0.8);
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .btn {
+      width: fit-content;
+      margin: 20px 0;
+    }
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: $text-color;
+}
+
+.main-header {
+  background-color: $secondary-color;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  margin: 0;
+}
+
+.site-title-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.btn-header {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: $primary-color;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $primary-color-light;
+    box-shadow: 0 4px 12px rgba(255, 0, 84, 0.3);
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 12px $primary-color-light;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $background-color;
+    box-shadow: 0 6px 16px $primary-color-dark;
+    color: $secondary-color;
+    transform: translateY(-2px);
+  }
+}
+
+.tournament-container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tournament-header {
+  text-align: center;
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $primary-color;
+  }
+}
+
+.tournament-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tournament-card {
+  background-color: $card-background-color;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px $card-shadow-color;
+  padding: 20px;
+  margin: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .tournament-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  .tournament-details {
+    margin-top: 10px;
+    font-size: 16px;
+    color: $text-color;
+  }
+}
+
+
+footer {
+  background-color: $secondary-color;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}

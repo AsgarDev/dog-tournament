@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Composer Épreuves pour le Tournoi{% endblock %}
+
+{% block body %}
+    <div class="container fade-in">
+        <h1>Composer Épreuves pour le Tournoi :</h1>
+
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="trialName">Nom de l'Épreuve</label>
+                <input type="text" id="trialName" name="trialName" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="trialDate">Date de l'Épreuve</label>
+                <input type="date" id="trialDate" name="trialDate" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="trialDescription">Description de l'Épreuve</label>
+                <textarea id="trialDescription" name="trialDescription" class="form-control" rows="3" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Ajouter l'Épreuve</button>
+        </form>
+
+        <a href="{{ path('home') }}" class="btn btn-secondary mt-3">Retourner à la liste des tournois</a>
+    </div>
+{% endblock %}

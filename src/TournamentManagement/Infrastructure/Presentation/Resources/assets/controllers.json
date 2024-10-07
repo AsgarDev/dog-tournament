@@ -1,0 +1,9 @@
+{
+  "controllers": {
+    "tournament": {
+      "identifier": "tournament",
+      "class": "App\\TournamentManagement\\Infrastructure\\Presentation\\Controller\\TournamentController",
+      "filename": "tournament_controller.js"
+    }
+  }
+}

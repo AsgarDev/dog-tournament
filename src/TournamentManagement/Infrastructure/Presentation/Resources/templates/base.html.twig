@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dog Tournament{% endblock %}</title>
+    {{ encore_entry_link_tags('styles') }}
+    {{ encore_entry_script_tags('app') }}
+</head>
+
+<body>
+<header class="main-header">
+    <div class="container header-content">
+        <div class="navbar-header">
+            <h1 class="site-title">
+                <a href="{{ path('home') }}" class="site-title-link">Dog Tournament</a>
+            </h1>
+
+            <button class="btn btn-header" onclick="location.href='{{ path('tournament_create') }}'">Créer un Tournoi</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    {% block body %}{% endblock %}
+</main>
+
+<footer>
+    <p>Dog Tournament © {{ "now"|date("Y") }}</p>
+</footer>
+</body>
+</html>

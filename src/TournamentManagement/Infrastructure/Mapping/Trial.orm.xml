@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="App\TournamentManagement\Domain\Entity\Trial" table="trials">
+        <id name="id" column="id" type="string">
+            <generator strategy="NONE"/>
+        </id>
+        <field name="name" type="string" length="255"/>
+        <field name="description" type="text" nullable="true"/>
+        <many-to-one field="tournament" target-entity="App\TournamentManagement\Domain\Entity\Tournament" inversed-by="trials">
+            <join-column name="tournament_id" referenced-column-name="id" nullable="false"/>
+        </many-to-one>
+    </entity>
+</doctrine-mapping>

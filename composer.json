@@ -7,6 +7,7 @@
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/annotations": "*",
         "doctrine/dbal": "^3",
         "doctrine/doctrine-bundle": "^2.13",
         "doctrine/doctrine-migrations-bundle": "^3.3",
@@ -21,6 +22,9 @@
         "symfony/messenger": "7.1.*",
         "symfony/runtime": "7.1.*",
         "symfony/serializer": "7.1.*",
+        "symfony/twig-bundle": "7.1.*",
+        "symfony/uid": "7.1.*",
+        "symfony/webpack-encore-bundle": "*",
         "symfony/yaml": "7.1.*"
     },
     "config": {
@@ -71,5 +75,8 @@
             "allow-contrib": false,
             "require": "7.1.*"
         }
+    },
+    "require-dev": {
+        "symfony/web-profiler-bundle": "7.1.*"
     }
 }

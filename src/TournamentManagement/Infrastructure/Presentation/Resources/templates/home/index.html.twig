@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des tournois{% endblock %}
+
+{% block body %}
+    <div class="tournament-container">
+        <div class="tournament-header">
+            <h2>Liste des tournois</h2>
+        </div>
+
+        <div class="tournament-list">
+            {% for tournament in tournaments %}
+                <div class="tournament-card">
+                    <h3 class="tournament-title">{{ tournament.name }}</h3>
+                    <p class="tournament-details">Début : {{ tournament.startDate|date("Y-m-d") }}</p>
+                    <p class="tournament-details">Fin : {{ tournament.endDate|date("Y-m-d") }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
